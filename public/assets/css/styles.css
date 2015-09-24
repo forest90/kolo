@@ -1,0 +1,79 @@
+textarea {
+	width: 500px !important;
+	resize: none ;
+	/*background-image: url('http://www.pomaski.pl/graphic/tapety/sarna.jpg') ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;*/
+}
+.navbar-brand img{
+	    width: 40px;
+    height: 40px;
+} 
+.post-width{
+	width: 84.5% !important;
+	margin-bottom: 10px;
+}
+
+.slider-image{
+	width: 100%
+}
+.carousel-inner>.item>img{
+	height: 270px !important;
+    width: 100% !important;
+}
+.image-post{
+	width:100px;
+	height:100px;
+}
+.m-t-md{
+	margin-top: 25px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.text-center{
+	text-align: center;
+}
+.photo-button{
+    width: 64px;
+    margin-top: 10px;
+}
+.table-head{
+	text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.text-center
+{
+	text-align: center;
+}
+.calendarTable{
+    width: 100%;
+}
+.calendarTable table tbody tr td:last-child{
+    padding: 0px 40px;
+}
+.info{
+	color: green;
+}
+/*.page-header span{
+    float: right;
+    margin-right: 15px;
+}*/
