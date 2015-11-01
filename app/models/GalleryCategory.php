@@ -9,7 +9,7 @@ class GalleryCategory extends \Eloquent {
 
 	public function photos()
 	{
-		return $this->hasMany('Gallery', 'id', 'category_id');
+		return $this->belongsTo('Gallery', 'id', 'category_id');
 	}
 
 	// public function thumbPhoto()

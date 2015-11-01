@@ -12,19 +12,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- Bootstrap Core CSS -->
-<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
 
 <!-- MetisMenu CSS -->
-<link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+<link href="{{asset('bower_components/metisMenu/dist/metisMenu.min.css')}}" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <!-- Timeline CSS -->
-<link href="../dist/css/timeline.css" rel="stylesheet">
+<link href="{{asset('dist/css/timeline.css')}}" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+<link href="{{asset('dist/css/sb-admin-2.css')}}" rel="stylesheet">
 
 <!-- Morris Charts CSS -->
-<link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+<link href="{{asset('bower_components/morrisjs/morris.css')}}" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">

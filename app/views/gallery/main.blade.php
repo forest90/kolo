@@ -1,5 +1,18 @@
 @extends('layouts.index')
+    @section('additionals')
+        {{ Form::open(array('url' => 'uploadGalleryFiles', 'method' => 'post', 'files' => true)) }}
     
+            <div class="pull-right col-lg-12 row" style="margin-bottom: 15px;">
+                <button class="btn btn-primary pull-right" type="submmit">Dodaj do galerii</button>
+                <span class="btn btn-default btn-file photo-button" 
+                    style="float: right; margin-top: 0px; margin-right: 15px;">
+                    <i class="fa fa-camera"></i><input name="photos[]" type="file" multiple>
+                </span>
+                <input type="hidden" value="{{$id}}" name="id"/>
+            </div>
+
+        {{ Form::close() }}
+    @stop
     @section('content')
 
         @if(!count($photos))

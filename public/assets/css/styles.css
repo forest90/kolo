@@ -93,15 +93,22 @@ textarea {
 }
 .cat-thumb{
     position: absolute;
-    top: 10;
+    top: 10px;
     width: 60%;
     left: 20%;
+    max-height: 60%;
 }
 .cat-thumbnail{
     position: relative;
     height: 159px;
 }
-
-
+.additionals{
+    padding-bottom: 0px !important;
+}
+.additionals-elem{
+    width: 25.333% !important; 
+    float: right !important; 
+    margin-right: 15px;
+}
 
 

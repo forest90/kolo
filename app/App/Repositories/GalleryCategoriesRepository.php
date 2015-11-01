@@ -22,7 +22,7 @@ class GalleryCategoriesRepository extends BaseRepository
 
 		public function getAllCategories()
 		{
-			// return $this->model->with(['photos' ])->get();
+			return $this->model->with(['photos'])->get();
 
 				// ->join('galleries', function ($query) {
 	   //              $query->select(\DB::raw(1))

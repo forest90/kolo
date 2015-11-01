@@ -30,7 +30,7 @@ use Carbon\Carbon;
 			return $photos;
 		}
 
-		public function uploadGalleryFiles($files, $userId)
+		public function uploadGalleryFiles($files, $userId, $categoryId = null)
 		{
 			foreach ($files as $file) {
 				$path = \Config::get('paths.gallery');
@@ -39,13 +39,15 @@ use Carbon\Carbon;
 				$size = $file->getSize();
 				$file = $file->move($path, $name);
 				$filePath = $file->getRealPath();
-				$file = \Gallery::create(['name' => $name, 'path' => $path.$name, 'user_id' => $userId]);
+				$file = \Gallery::create(['name' => $name, 'path' => $path.$name, 'user_id' => $userId, 'category_id' => $categoryId]);
 			}
 		}
 
 		public function getAllGalleryCategories()
 		{
-			$cateories = $this->gallery->getGalleryCategoriesWithThumb();
+			$cateories = $this->categories->getAllCategories();
+			// dd($cateories->toArray());
+			// $this->gallery->getGalleryCategoriesWithThumb();
 			return $this->galleryTransformer->getCategoryWithPhoto($cateories);
 		}
 

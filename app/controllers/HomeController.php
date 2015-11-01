@@ -80,11 +80,11 @@ class HomeController extends BaseController {
 		list($photos, $categoryName) = $this->gallery->getPhotosForGalleryByCategory($id);			
 		$aside = false;
 		$title = $categoryName;
-		return View::make('gallery.main')->with(compact('photos', 'aside', 'title'));
+		return View::make('gallery.main')->with(compact('photos', 'aside', 'title', 'id'));
 	}
 	public function uploadGalleryFiles()
 	{
-		$this->gallery->uploadGalleryFiles(Input::file('photos'), Auth::id());
+		$this->gallery->uploadGalleryFiles(Input::file('photos'), Auth::id(), Input::get('id'));
 		return $this->gallery();
 	}
 
@@ -94,5 +94,11 @@ class HomeController extends BaseController {
 		$title = 'Kategorie galerii';
 		$aside = false;
 		return View::make('gallery.categories')->with(compact('categories', 'title', 'aside'));
+	}
+	public function addCategory()
+	{
+		GalleryCategory::create(Input::only('name', 'description'));
+		return Redirect::action('HomeController@galleryCategories');
+
 	}
 }

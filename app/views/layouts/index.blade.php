@@ -41,12 +41,19 @@
         <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header col-lg-6">
-                        {{ isset($title) ? $title : 'Koło łowieckie Knieja w Kościanie'}}
-                        </h1>
-                        <div class="page-header col-lg-6">
-                            @yield('additionals')
-                        </div>
+                        @if (trim($__env->yieldContent('additionals')))
+                            {{-- <h1>@yield('title')</h1> --}}
+                            <h1 class="page-header col-lg-6">
+                                {{ isset($title) ? $title : 'Koło łowieckie Knieja w Kościanie'}}
+                            </h1>
+                            <div class="page-header additionals col-lg-6">
+                                @yield('additionals')
+                            </div>
+                        @else
+                            <h1 class="page-header col-lg-12">
+                                {{ isset($title) ? $title : 'Koło łowieckie Knieja w Kościanie'}}
+                            </h1>
+                        @endif
 
                     </div>
                     <!-- /.col-lg-12 -->
