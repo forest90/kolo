@@ -33,7 +33,9 @@ class GalleryTransformer{
 	public function getPhotosForCategory($photos)
 	{
 		$result = [];
+		$name = '';
 		foreach ($photos as $key => $value) {
+
 			$name = $value->category->name;
 			$result[] = [
 				'id' => $value->id,

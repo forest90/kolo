@@ -21,7 +21,8 @@
                 <div class="row">
                     @foreach($categories as $category)
                         <div class="col-lg-3 col-md-4 col-xs-6">
-                            <a class="cat-thumbnail thumbnail" href="{{url('/gallery/'.$category['id'])}}">
+                            <a class="cat-thumbnail thumbnail" 
+                                href="{{action('HomeController@gallery', $category['id'])}}">
                                 <img class="thumb cat-thumb" src="{{$category['path']}}" alt="">
                             </a>
                             <p class="cat-desc">{{$category['description']}} </p>

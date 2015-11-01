@@ -1,5 +1,5 @@
 <?php
-
+ini_set('zlib.output_compression', 'Off');
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader

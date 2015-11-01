@@ -75,9 +75,9 @@ class HomeController extends BaseController {
 		}
 		return View::make('main.index')->with('message', $message);
 	}
-	public function gallery($category = 1)
+	public function gallery($id = 1)
 	{
-		list($photos, $categoryName) = $this->gallery->getPhotosForGalleryByCategory($category);
+		list($photos, $categoryName) = $this->gallery->getPhotosForGalleryByCategory($id);			
 		$aside = false;
 		$title = $categoryName;
 		return View::make('gallery.main')->with(compact('photos', 'aside', 'title'));

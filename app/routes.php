@@ -12,12 +12,12 @@
 */
 Route::group(array('before' => 'auth'), function()
 {
-Route::get('/users/{name}', 'HomeController@userPage');
-Route::post('/addPost', 'HomeController@addPost');
-Route::get('/home/{month?}', 'HomeController@home');
-Route::get('/gallery/{category}', 'HomeController@gallery');
-Route::get('/galleryCategories', 'HomeController@galleryCategories');
-Route::post('/uploadGalleryFiles', 'HomeController@uploadGalleryFiles');
+	Route::get('/users/{name}', 'HomeController@userPage');
+	Route::post('/addPost', 'HomeController@addPost');
+	Route::get('/home/{month?}', 'HomeController@home');
+	Route::get('/gallery/{id}', 'HomeController@gallery');
+	Route::get('/galleryCategories', 'HomeController@galleryCategories');
+	Route::post('/uploadGalleryFiles', 'HomeController@uploadGalleryFiles');
 });
 Route::get('/', 'HomeController@main');
 Route::get('/login', 'AuthController@getLogin');

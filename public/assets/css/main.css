@@ -72,7 +72,7 @@
     height: 30px;
 }
 .nav-button{
-    background: linear-gradient(#581830,#340e1c);
+    background: linear-gradient(#E9E581,#A2AB58);
 }
 .message-main{
     font-size: 10px;
@@ -107,15 +107,7 @@
 ul{
     float:left;
 }
-ul li{
-    width: 132px;
-    height: 35px;
-    padding-top: 5px;
-}
-ul li{
-    width: 132px;
-    height: 35px;
-}
+
 ul li {
     background-color:#5A5A5A;
     background-color: #C3C2BD;    
@@ -131,6 +123,9 @@ ul li {
     border-bottom:1px solid #FFF;
     cursor:pointer;
     float: left;
+    width: 132px;
+    height: 60px;
+    padding-top: 18px;
 }
 
 ul li a {
@@ -213,4 +208,12 @@ ul > .aside-menu a {
     color:#FFFFFF;
     text-decoration:none;
     vertical-align:middle;
+}
+.main-login{
+	float: left;
+    width: 90%;
+    margin-left: 5%;
+}
+.center{
+	text-align: center;
 }

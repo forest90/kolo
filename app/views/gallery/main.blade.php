@@ -13,7 +13,7 @@
                     @foreach($photos as $photo)
                         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                             <a class="thumbnail">
-                                <img class="img-responsive" src="{{$photo['path']}}" alt="">
+                                <img class="img-responsive" src="../{{$photo['path']}}" alt="">
                             </a>
                         </div>
                     @endforeach
