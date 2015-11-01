@@ -1,0 +1,216 @@
+/*MAIN PAGE*/   
+
+
+
+.backgorund-main{
+    background-image: url('../img/tlojasne.jpg');
+    background-repeat: no-repeat;
+        background-size: 100%;
+}
+.white{
+    height: 1000px;
+    background-color: white;
+}
+.title{
+    background-color: #4FA833;
+    height: 150px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.title span{
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+.top{
+    padding: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 5px !important;
+}
+.top-img{
+    position: absolute;
+    right: -30px;
+    width: 16%;
+    top: 2px;
+    transform: rotateY(180deg);
+}
+.content{
+    padding: 0 !important;
+
+    display: inline-block;
+}
+.content .navigation{
+    text-align: center;
+    height: 80px;
+    padding-left: 5px;
+        padding-right: 0px;
+
+}
+.content .navigation:first-child{
+    padding-left: 0px;
+
+}
+
+.content .navigation:first-child img{
+    width: 166px;
+}
+.tool-bar{
+    height: 150px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background: linear-gradient(#E6E6E6, #C0C0C0);
+    margin-left: 5px;
+    width: 161px !important;
+}
+
+.navigation img{
+    padding: 0px;
+    height: 121px;
+}
+
+.content div{
+    height: 30px;
+}
+.nav-button{
+    background: linear-gradient(#581830,#340e1c);
+}
+.message-main{
+    font-size: 10px;
+    text-align: center;
+    color: red;
+}
+.tool-bar button{
+    float: right;
+    margin-top: 8px;
+    padding: 0px 5px;
+    margin-right: 10px;
+}
+.padding-zero{
+    padding: 0;
+}
+
+
+
+
+.main-aside{
+    margin-top: 5px;
+}
+
+.main-aside{
+    width: 167px;
+    padding-left: 0px;
+}
+
+.main-aside li{
+    width: 100%;
+}
+ul{
+    float:left;
+}
+ul li{
+    width: 132px;
+    height: 35px;
+    padding-top: 5px;
+}
+ul li{
+    width: 132px;
+    height: 35px;
+}
+ul li {
+    background-color:#5A5A5A;
+    background-color: #C3C2BD;    
+    line-height: 26px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 20px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+    float: left;
+}
+
+ul li a {
+    color:#5C0602;
+    text-decoration:none;
+    vertical-align:middle;
+}
+
+ul > .aside-menu:hover {
+    background-color: #5C0602;
+}
+
+ul > .aside-menu:hover > a {
+    color: #FFFFFF;
+}
+
+ul  .aside-menu {
+    background-color:#5A5A5A;
+    height:16px;
+    line-height: 16px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 30px;
+    width: 135px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+    float: left;
+}
+
+ul .aside-menu a {
+    color:#FFFFFF;
+    text-decoration:none;
+    vertical-align:middle;
+}
+
+ul .aside-menu {
+    background-color:#5A5A5A;
+    height:16px;
+    line-height: 16px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 30px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+}
+
+ul .aside-menu a {
+    color:#FFFFFF;
+    text-decoration:none;
+    vertical-align:middle;
+}
+
+ul .aside-menu {
+    background-color:#5C0602;
+    height:16px;
+    line-height: 16px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 30px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+}
+
+ul > .aside-menu a {
+    color:#FFFFFF;
+    text-decoration:none;
+    vertical-align:middle;
+}

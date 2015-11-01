@@ -6,7 +6,8 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <title>Koło łowieckie Knieja</title>
 
-<link href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/main-styles.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
