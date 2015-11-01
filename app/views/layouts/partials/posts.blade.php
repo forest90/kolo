@@ -23,7 +23,7 @@
 	                                        <div class="timeline-body">
 	                                            <p>{{$post->body}}</p>
                                                 @if(isset($post->photos) && !empty($post->photos))
-                                                    <img src="{{$post->photos['path']}}" class="image-post">
+                                                    <img src="{{asset($post->photos['path'])}}" class="image-post">
                                                 @endif
                                             </div>
 	                                    </div>
