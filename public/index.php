@@ -1,4 +1,5 @@
 <?php
+ini_set('zlib.output_compression', 'Off');
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
