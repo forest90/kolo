@@ -69,19 +69,30 @@ class HomeController extends BaseController {
 	}
 	public function main()
 	{
-		return View::make('main.index');
+		$message  =null;
+		if(Session::get('message')){
+			$message = Session::get('message');
+		}
+		return View::make('main.index')->with('message', $message);
 	}
-	public function gallery($page = 1)
+	public function gallery($category = 1)
 	{
-
-		$photos = $this->gallery->getPhotosForGalleryByPage($page);
+		list($photos, $categoryName) = $this->gallery->getPhotosForGalleryByCategory($category);
 		$aside = false;
-		$title = 'Galeria';
+		$title = $categoryName;
 		return View::make('gallery.main')->with(compact('photos', 'aside', 'title'));
 	}
 	public function uploadGalleryFiles()
 	{
 		$this->gallery->uploadGalleryFiles(Input::file('photos'), Auth::id());
 		return $this->gallery();
+	}
+
+	public function galleryCategories()
+	{
+		$categories = $this->gallery->getAllGalleryCategories();
+		$title = 'Kategorie galerii';
+		$aside = false;
+		return View::make('gallery.categories')->with(compact('categories', 'title', 'aside'));
 	}
 }

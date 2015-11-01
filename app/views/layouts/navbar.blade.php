@@ -246,7 +246,7 @@
                             <a href="{{asset('/home')}}"><i class="fa fa-home fa-fw"></i> Home</a>
                         </li>
                         <li>
-                            <a href="{{url('/gallery')}}"><i class="fa fa-camera-retro fa-fw"></i> Galeria</a>
+                            <a href="{{url('/galleryCategories')}}"><i class="fa fa-camera-retro fa-fw"></i> Galeria</a>
                         </li>
                         <li>
                             <a href="morris.html"><i class="fa fa-dashboard fa-fw"></i> Morris.js Charts</a>

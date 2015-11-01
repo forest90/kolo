@@ -23,6 +23,20 @@ use models;
 
 		public function getGalleryByPage($page)
 		{
-			return $this->model->take(9*$page)->get();
+			return $this->model->take(12*$page)->get();
+		}
+
+		public function getAllPhotosForCategory($categoryId)
+		{
+			// return $this->model->with(['category'])->where()->get();
+		}
+		public function getGalleryCategoriesWithThumb()
+		{
+			return $this->model->where('category_id', '!=', 'null')->with(['category'])->groupBy('category_id')->get();
+		}
+
+		public function getPhotosForCategory($category)
+		{
+			return $this->model->where('category_id', '=', $category)->with(['category'])->get();
 		}
 	}

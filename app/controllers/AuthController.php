@@ -24,6 +24,7 @@ class AuthController extends \BaseController {
 		{
 		    return Redirect::intended('home');
 		}
+		return Redirect::to('/')->with('message', 'Podano zły login lub hasło.');
 	}
 	public function getRegister()
 	{
@@ -37,6 +38,6 @@ class AuthController extends \BaseController {
 	public function logout()
 	{
 		Auth::logout();
-		return Redirect::to('');
+		return Redirect::to('/');
 	}
 }
