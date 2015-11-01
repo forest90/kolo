@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '127.0.0.2',
-			'database'  => 'kolo',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'mysql.hostinger.pl',
+			'database'  => 'u222444593_kolo',
+			'username'  => 'u222444593_fores',
+			'password'  => 'parker',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
