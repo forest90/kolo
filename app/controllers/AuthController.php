@@ -34,7 +34,7 @@ class AuthController extends \BaseController {
 	{
 		if(Input::get('key') == 'dzikilas' || Input::get('key') == 'dzikilasadmin'){
 			if(Input::get('key') == 'dzikilasadmin'){
-				$user = ['user_type' => 'admin'];
+				$user = ['user_type' => 'administration'];
 			}
 			$this->auth->register(Input::only('email', 'password') + $user);
 			return View::make('auth.login')->with('message', 'Rejestracja przebiegła pomyślnie');
