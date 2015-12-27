@@ -40,4 +40,36 @@ class AuthController extends \BaseController {
 		Auth::logout();
 		return Redirect::to('/');
 	}
+
+	public function getUserAvatar()
+	{
+		$name = Auth::getUser()->avatar->path;
+		return asset($name);
+	}
+	public function profile()
+	{
+		return \View::make('auth.profile')->with('user', Auth::getUser());
+	}
+	public function postProfile()
+	{
+		$data = \Input::all();
+		$file_id = Auth::getUser()->avatar_id;
+
+		if(Input::hasFile('avatar')){
+			$path = \Config::get('paths.upload');
+			$name = \Input::file('avatar')->getClientOriginalName();
+			$mime = 'jpg';
+			$size = \Input::file('avatar')->getSize();
+			$file = \Input::file('avatar')->move($path, $name);
+			$filePath = $file->getRealPath();
+			$file = Photo::create(['mime_type' => $mime, 'size' => $size, 'path' => $path.$name]);
+			$file_id = $file->id;
+		}
+		if(!$data['nick']) {
+			$data['nick'] = Auth::getUser()->nick;
+		}
+
+		Auth::getUser()->update(['avatar_id' => $file_id, 'nick' => $data['nick']]);
+		return Redirect::action('HomeController@home');
+	}
 }

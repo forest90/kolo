@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,14 +11,20 @@
 */
 Route::group(array('before' => 'auth'), function()
 {
-	Route::get('/users/{name}', 'HomeController@userPage');
-	Route::post('/addPost', 'HomeController@addPost');
-	Route::get('/home/{month?}', 'HomeController@home');
-	Route::get('/gallery/{id}', 'HomeController@gallery');
-	Route::get('/galleryCategories', 'HomeController@galleryCategories');
-	Route::post('/uploadGalleryFiles', 'HomeController@uploadGalleryFiles');
-	Route::post('/addCategory', 'HomeController@addCategory');
-	
+	Route::get('/users/{name}',[ 'as' => 'home', 'uses' => 'HomeController@userPage']);
+	Route::post('/addPost', ['as' => 'post', 'uses' => 'HomeController@addPost']);
+	Route::get('/home/{month?}', ['as' => 'homeMonth', 'uses' => 'HomeController@home']);
+	Route::get('/gallery/{id}', ['as' => 'gallery', 'uses' => 'HomeController@gallery']);
+	Route::get('/galleryCategories', ['as' => 'categories', 'uses' => 'HomeController@galleryCategories']);
+	Route::post('/uploadGalleryFiles', ['as' => '', 'uses' => 'HomeController@uploadGalleryFiles']);
+	Route::post('/addCategory', ['as' => '', 'uses' => 'HomeController@addCategory']);
+	Route::get('/notifications/{id?}', ['as' => 'notifications', 'uses' => 'ManagementController@getAnnouncements']);
+	Route::get('/profile', ['as' => 'profile', 'uses' => 'AuthController@profile']);
+	Route::post('/profile/update', ['as' => 'updateProfile', 'uses' => 'AuthController@postProfile']);
+	Route::group(array('before' => 'auth|administration'), function()
+	{
+		Route::post('/notifications', 'ManagementController@postAnnouncement');
+	});
 });
 Route::get('/', 'HomeController@main');
 Route::get('/login', 'AuthController@getLogin');
@@ -27,6 +32,12 @@ Route::post('/register', 'AuthController@postRegister');
 Route::get('/register', 'AuthController@getRegister');
 Route::post('/login', 'AuthController@postLogin');
 Route::get('/logout', 'AuthController@logout');
+Route::get('/news', ['as' => 'news', 'uses' => 'MainController@news']);
+Route::get('/history', ['as' => 'news', 'uses' => 'MainController@history']);
+Route::get('/gallery', ['as' => 'main.gallery', 'uses' => 'MainController@gallery']);
+Route::get('/scheduler/{month?}', ['as' => 'calendar', 'uses' => 'MainController@calendar']);
+
+
 
 // dd('cos');
 Route::filter('auth', function(){
@@ -36,3 +47,16 @@ Route::filter('auth', function(){
 	}
 	
 });
+
+View::composer(array('layouts.index'), function($view)
+{
+    $view
+    	->with('announcements', \App::make('HomeController')->getAnnouncements())
+    	->with('avatarPath', \App::make('AuthController')->getUserAvatar());
+});
+View::composer(array('main.index'), function($view)
+{
+	$isLogged = \Auth::user() ? true : false;
+    $view->with('isLogged', $isLogged);
+});
+

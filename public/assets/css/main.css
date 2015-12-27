@@ -1,14 +1,13 @@
 /*MAIN PAGE*/   
 
 
-
 .backgorund-main{
     background-image: url('../img/tlojasne.jpg');
     background-repeat: no-repeat;
         background-size: 100%;
 }
 .white{
-    height: 1000px;
+    min-height: 1000px;
     background-color: white;
 }
 .title{
@@ -124,7 +123,7 @@ ul li {
     cursor:pointer;
     float: left;
     width: 132px;
-    height: 60px;
+    min-height: 60px;
     padding-top: 18px;
 }
 
@@ -216,4 +215,143 @@ ul > .aside-menu a {
 }
 .center{
 	text-align: center;
+}
+
+
+
+
+
+/*RIGHT ASSIDE*/
+
+.right-main-aside{
+    margin-top: 5px;
+}
+
+.right-main-aside{
+    width: 160px;
+    padding-left: 0px;
+    margin-left: 5px;
+}
+
+.right-main-aside li{
+    width: 100%;
+}
+
+ul > .aside-menu:hover {
+    background-color: #5C0602;
+}
+
+ul > .aside-menu:hover > a {
+    color: #FFFFFF;
+}
+
+ul  .aside-menu {
+    background-color:#5A5A5A;
+    height:16px;
+    line-height: 16px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 30px;
+    width: 135px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+    float: left;
+}
+
+ul .aside-menu a {
+    color:#FFFFFF;
+    text-decoration:none;
+    vertical-align:middle;
+}
+
+ul .aside-menu {
+    background-color:#5A5A5A;
+    height:16px;
+    line-height: 16px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 30px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+}
+
+ul .aside-menu a {
+    color:#FFFFFF;
+    text-decoration:none;
+    vertical-align:middle;
+}
+
+ul .aside-menu {
+    background-color:#5C0602;
+    height:16px;
+    line-height: 16px;
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    vertical-align:middle;
+    padding: 5px 5px 5px 30px;
+    border-bottom:1px solid #FFF;
+    cursor:pointer;
+}
+
+ul > .aside-menu a {
+    color:#FFFFFF;
+    text-decoration:none;
+    vertical-align:middle;
+}
+.main-login{
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+}
+.center{
+    text-align: center;
+}
+
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+/*.site-footer, .page-wrap:after {
+  height: 142px; 
+}*/
+.site-footer {
+  background: white;
+  height: 20px;
+}
+.main-content{
+    backgorund-color: red; 
+    min-height: 300px;
+
+}
+.main-content table{
+    text-align: center;
+}
+.main-content table .table-head{
+    font-size: 30px;
+}
+.m-t-md{
+    margin-top: 15px;
 }

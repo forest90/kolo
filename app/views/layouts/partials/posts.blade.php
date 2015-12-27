@@ -12,9 +12,21 @@
 	                                @else
 	                                	<li>
 	                                @endif
-	                                    <div class="timeline-badge"><i class="fa fa-check"></i>
+	                                    <div class="timeline-badge">
+                                        @if($post->user)
+
+                                            <img class="post-avatar avatar" 
+                                                src="{{asset($post->user->avatar->path)}}">
+                                        @endif
+                                        {{-- <i class="fa fa-check"></i> --}}
 	                                    </div>
 	                                    <div class="timeline-panel">
+                                        @if($post->user)
+                                            <div class="pull-right" 
+                                                style="font-weight: 800; font-size: 10px;">
+                                                {{$post->user->nick}}
+                                            </div>
+                                        @endif
 	                                        <div class="timeline-heading">
 	                                            <h4 class="timeline-title">{{$post->name}}</h4>
 	                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> {{$post->created_at}}</small>

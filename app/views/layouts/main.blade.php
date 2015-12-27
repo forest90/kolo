@@ -13,8 +13,7 @@
 	        <div class="panel-body">
 	          <form method="post" action="addPost" enctype="multipart/form-data">
 	            <article class="">
-	                <input name="name" type="text" placeholder="Wpisz tytuł" 
-	                class="form-control post-width" aria-describedby="helpBlock">
+	               
 	                <div class="pull-right text-center">
 	                    <button class="btn btn-primary pull-right" type="submmit">Zapisz</button>
 	                    </br>
@@ -22,7 +21,10 @@
 	                        <i class="fa fa-camera"></i><input name="photo" type="file">
 	                    </span>
 	                </div>
-					<textarea class="form-control" id="content" placeholder="Wpisz treść" rows="8" name="body"></textarea>
+					<div class="col-lg-10" style="
+    padding: 0px;
+">
+  <input name="name" type="text" placeholder="Wpisz tytuł" class="form-control post-width" aria-describedby="helpBlock" ><textarea class="form-control" id="content" placeholder="Wpisz treść" rows="8" name="body"></textarea></div>
 	            </article>
 	            </form>
 	            <div id="morris-area-chart"></div>

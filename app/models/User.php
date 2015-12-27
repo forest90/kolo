@@ -9,6 +9,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	const TYPE_REGULAR = 'regular';
+	const TYPE_ADMINISTRATION = 'administration';
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -23,5 +26,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	// protected $hidden = array('password', 'remember_token');
+	public function avatar()
+	{
+		return $this->hasOne('Photo', 'id', 'avatar_id');
+	}
 
 }

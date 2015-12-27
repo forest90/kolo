@@ -43,6 +43,10 @@ class GalleryCategoriesRepository extends BaseRepository
 		}
 		public function getPhotosForCategory($categoryId)
 		{
-			return $this->model->with(['photos'])->where('id', '=', $categoryId)->get();
+			return $this->model->where('id', '=', $categoryId)->with(['photosForCategories'])->first();
 		}
+		// public function getPhotosForCategory($categoryId)
+		// {
+		// 	return $this->model->with(['photos'])->where('category_id', '=', $categoryId);
+		// }
 	}

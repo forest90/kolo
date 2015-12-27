@@ -17,8 +17,6 @@ class GalleryTransformer{
 	{
 		$result = [];
 		foreach ($categories as $key => $value) {
-			// dd($value);
-			// if($value->photos) {dd($value->photos->toArray());}
 			$result[] = [
 				'id' => $value->id,
 				'name' => $value->name,
@@ -35,17 +33,15 @@ class GalleryTransformer{
 	public function getPhotosForCategory($photos)
 	{
 		$result = [];
-		$name = '';
-		foreach ($photos as $key => $value) {
-
-			$name = $value->category->name;
+			$name = $photos->name;
+		foreach ($photos->photosForCategories as $value) {
 			$result[] = [
-				'id' => $value->id,
-				'name' => $value->name,
-				'description' =>$value->description,
-				'created_at' => $value->created_at,
-				'path' => $value->path,
-				'create_date' => $value->created_at->toDateString()
+				'id' => $value['id'],
+				'name' => $value['name'],
+				'description' =>$value['description'],
+				'created_at' => $value['created_at'],
+				'path' => $value['path'],
+				'create_date' => $value['created_at']
 			];
 
 		}

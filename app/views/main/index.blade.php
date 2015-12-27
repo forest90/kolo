@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Koło Łowieckie Knieja w Kościanie</title>
-	@include('main.assets')
-</head>
-<body class="backgorund-main">
-	<div class="col-lg-12">
-		<div class="col-lg-10 col-lg-offset-1 white">
-			{{-- TOP --}}
-			<div class="col-lg-12 top">
-				<div class="title">
-					<span>
-						Koło Łowieckie Knieja w Kościanie
-					</span>
-					<img class="top-img" src="assets/img/oie.png">
-				</div>
+	<head>
+		<title>Koło Łowieckie Knieja w Kościanie</title>
+		@include('main.assets')
+	</head>
+	<body class="">
+		<div class="col-lg-10 col-lg-offset-1 top" style="z-index: 10;">
+			<div class="title">
+				<span>
+					Koło Łowieckie Knieja w Kościanie
+				</span>
+				<img class="top-img" src="assets/img/oie.png">
 			</div>
-			{{-- TOP END --}}
-			{{-- CONTENT --}}
-			@include('main.nav-top')
-			@include('main.aside')
-			@include('main.content')
-			{{-- CONTENT END --}}
 		</div>
-	</div>
-</body>
+		<div class="background-image"></div>
+		@if(!$isLogged)
+			<a href="{{url('/login')}}" class="login">
+				<i class="fa fa-power-off fa-4" style="color: #c00;"></i>
+			</a>
+		@endif
+		@if($isLogged)
+			<a href="{{url('/home')}}" class="login">
+				<i class="fa fa-power-off fa-4" style="color: #337ab7;"></i>
+			</a>
+		@endif
+		<div class="content">
+			@include('main.topNavbar')
+			@include('main.content')
+		</div>
+	</body>
 </html>
+<style type="text/css">
+
+</style>

@@ -1,47 +1,50 @@
 <?php
 use Carbon\Carbon;
 use App\Services\GalleryService;
+use App\Services\ManagementNotificationsService;
 
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
+
 	public $post;
 	public $gallery;
+	public $managementNotificationsService;
 
 
-	public function __construct(Post $post, GalleryService $gallery)
+	public function __construct(
+		Post $post, 
+		GalleryService $gallery, 
+		ManagementNotificationsService $managementNotificationsService
+		)
 	{
 		$this->post = $post;
 		$this->gallery = $gallery;
+		$this->managementNotificationsService = $managementNotificationsService;
 	}
 
 	public function showWelcome()
 	{
 		return View::make('hello');
 	}
+	public function getAnnouncements()
+	{
+		return $this->managementNotificationsService->getAllAnnouncements();
+	}
 
 	public function home($month = null)
 	{
+		$canAdd = Auth::getUser()->user_type == User::TYPE_ADMINISTRATION;
 		if(!$month)
 		{
 			$month = Carbon::now()->month;
 		}
 
-		$posts = $this->post->find(1)->orderBy('created_at', 'DESC')->with('photos')->get();
+		$posts = $this->post->find(1)->orderBy('created_at', 'DESC')->with('photos', 'user', 'user.avatar')->get();
+		$announcements = $this->managementNotificationsService->getAllAnnouncements();
 
-		return View::make('layouts.main')->with(compact('posts', 'month'));
+
+		return View::make('layouts.main')->with(compact('posts', 'month', 'announcements', 'canAdd'));
 	}
 
 	public function userPage($name = null)
@@ -73,7 +76,7 @@ class HomeController extends BaseController {
 		if(Session::get('message')){
 			$message = Session::get('message');
 		}
-		return View::make('main.index')->with('message', $message);
+		return View::make('main.main')->with('message', $message);
 	}
 	public function gallery($id = 1)
 	{

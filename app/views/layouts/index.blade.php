@@ -61,25 +61,31 @@
                 @yield('content')
                 @if(!isset($aside))
                     <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bell fa-fw"></i> Powiadomienia zarządu
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- /.list-group -->
-                                <a href="{{asset('notifications')}}" class="btn btn-default btn-block">View All Alerts</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
+                        @include('layouts.partials.announcement')
+                        <style type="text/css">
+                            .chat-fade{
+                                position: absolute;
+                                background-color: gray;
+                                opacity: 0.98;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .chat-panel{
+                                position: relative;
+                            }
+                        </style>
                         <div class="chat-panel panel panel-default">
+                        <div class="chat-fade">
+                            <div style="positon:relative">
+                                <div 
+                                    style="position: absolute; top: 50%; 
+                                     bottom: -50%; left: 18%;text-align: center; font-size: 20px;">
+                                    Czat dostępny wkrótce.
+                                </div>
+                            </div>
+                        </div>
                             <div class="panel-heading">
                                 <i class="fa fa-comments fa-fw"></i>
                                 Czat

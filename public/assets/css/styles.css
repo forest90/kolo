@@ -1,5 +1,4 @@
 textarea {
-	width: 500px !important;
 	resize: none ;
 	/*background-image: url('http://www.pomaski.pl/graphic/tapety/sarna.jpg') ;
 	background-repeat: no-repeat;
@@ -11,7 +10,7 @@ textarea {
     height: 40px;
 } 
 .post-width{
-	width: 84.5% !important;
+	/*width: 84.5% !important;*/
 	margin-bottom: 10px;
 }
 
@@ -110,5 +109,36 @@ textarea {
     float: right !important; 
     margin-right: 15px;
 }
+.announcement-title{
+    font-weight: 800;
+    font-size: 16px;
+    text-align: center;
+}
+/* Rounded avatars */
+.post-avatar{
+    width: 50px;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+.avatar {
+    float: left;
+    margin-right: 1em;
+    position: relative;
 
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+.avatar-profile{
+    width:35px;
+}
+.m-b-md{
+    margin-bottom: 15px;
+}
+.timeline > li > .timeline-badge {
+    background-color: #fff !important;
+}
