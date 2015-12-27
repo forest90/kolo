@@ -32,8 +32,11 @@ class AuthController extends \BaseController {
 	}
 	public function postRegister()
 	{
-		if(Input::get('key') == 'dzikilas'){
-			$this->auth->register(Input::only('email', 'password'));
+		if(Input::get('key') == 'dzikilas' || Input::get('key') == 'dzikilasadmin'){
+			if(Input::get('key') == 'dzikilasadmin'){
+				$user = ['user_type' => 'admin'];
+			}
+			$this->auth->register(Input::only('email', 'password') + $user);
 			return View::make('auth.login')->with('message', 'Rejestracja przebiegła pomyślnie');
 		}else{
 			return Redirect::to('/')->with('message', 'Podano zły klucz.');

@@ -14,7 +14,8 @@ namespace App\Services;
 		{
 			\User::create([
 				'email' => $input['email'],
-				'password' => \Hash::make($input['password'])
+				'password' => \Hash::make($input['password']),
+				'user_type' => isset($input['user_type']) ? $input['user_type'] : 'regular'
 			]);
 		}
 	}
