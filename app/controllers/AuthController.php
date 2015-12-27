@@ -32,8 +32,13 @@ class AuthController extends \BaseController {
 	}
 	public function postRegister()
 	{
-		$this->auth->register(Input::only('email', 'password'));
-		return View::make('auth.login')->with('message', 'Rejestracja przebiegła pomyślnie');
+		if(Input::get('key') == 'dzikilas'){
+			$this->auth->register(Input::only('email', 'password'));
+			return View::make('auth.login')->with('message', 'Rejestracja przebiegła pomyślnie');
+		}else{
+			return Redirect::to('/')->with('message', 'Podano zły klucz.');
+		}
+
 	}
 	public function logout()
 	{
@@ -43,7 +48,13 @@ class AuthController extends \BaseController {
 
 	public function getUserAvatar()
 	{
-		$name = Auth::getUser()->avatar->path;
+		if(isset(Auth::getUser()->avatar)){
+
+			$name = Auth::getUser()->avatar->path;
+		}
+		else{
+			$name = 'assets/img/blank.png';
+		}
 		return asset($name);
 	}
 	public function profile()

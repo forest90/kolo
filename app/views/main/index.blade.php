@@ -24,6 +24,11 @@
 				<i class="fa fa-power-off fa-4" style="color: #337ab7;"></i>
 			</a>
 		@endif
+		@if($message)
+			<span class="info">
+				{{$message}}
+			</span>
+		@endif
 		<div class="content">
 			@include('main.topNavbar')
 			@include('main.content')
@@ -31,5 +36,11 @@
 	</body>
 </html>
 <style type="text/css">
-
+.info{
+	position: absolute;
+	top: 90px;
+	left: 8px;
+	color: #c00;
+	z-index: 12;
+}
 </style>

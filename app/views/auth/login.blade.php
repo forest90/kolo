@@ -61,6 +61,9 @@
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                 <button type="submmit" class="btn btn-lg btn-success btn-block">Zaloguj</button>
+                                <span class="btn btn-lg btn-success btn-block">
+                                    <a href="{{url('/register')}}">Nie masz konta? Zarejestruj się</a>
+                                </span>
                             </fieldset>
                         </form>
                     </div>

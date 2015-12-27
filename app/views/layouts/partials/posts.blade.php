@@ -17,6 +17,11 @@
 
                                             <img class="post-avatar avatar" 
                                                 src="{{asset($post->user->avatar->path)}}">
+
+                                        @else
+                                                <img class="post-avatar avatar" 
+                                                src="{{asset('assets/img/blank.png')}}">
+                                        
                                         @endif
                                         {{-- <i class="fa fa-check"></i> --}}
 	                                    </div>

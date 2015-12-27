@@ -50,6 +50,9 @@
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Klucz" name="key" type="text">
+                                </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                 <button type="submmit" class="btn btn-lg btn-success btn-block">Zarejestruj</button>
                             </fieldset>

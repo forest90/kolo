@@ -26,7 +26,8 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'mysql_prod',
+	// 'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -62,6 +63,17 @@ return array(
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
+		'mysql_prod' => array(
+			'driver'    => 'mysql',
+			'host'      => 'mysql.hostinger.pl',
+			'database'  => 'u222444593_kolo',
+			'username'  => 'u222444593_fores',
+			'password'  => 'parker',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
