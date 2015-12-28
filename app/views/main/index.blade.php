@@ -24,7 +24,7 @@
 				<i class="fa fa-power-off fa-4" style="color: #337ab7;"></i>
 			</a>
 		@endif
-		@if($message)
+		@if(isset($message))
 			<span class="info">
 				{{$message}}
 			</span>
