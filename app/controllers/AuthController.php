@@ -51,13 +51,16 @@ class AuthController extends \BaseController {
 
 	public function getUserAvatar()
 	{
-		if(isset(Auth::getUser()->avatar)){
+		if(Auth::getUser()->avatar){
 
 			$name = Auth::getUser()->avatar->path;
 		}
 		else{
 			$name = 'assets/img/blank.png';
 		}
+		// dd(Auth::getUser()->toArray());
+		// dd(Auth::getUser()->avatar->path);
+		
 		return asset($name);
 	}
 	public function profile()

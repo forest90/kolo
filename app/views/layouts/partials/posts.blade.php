@@ -1,3 +1,4 @@
+@if(count($posts)>0)
 <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-clock-o fa-fw"></i> Posty
@@ -13,7 +14,7 @@
 	                                	<li>
 	                                @endif
 	                                    <div class="timeline-badge">
-                                        @if($post->user)
+                                        @if($post->user and isset($post->user->avatar))
 
                                             <img class="post-avatar avatar" 
                                                 src="{{asset($post->user->avatar->path)}}">
@@ -138,3 +139,4 @@
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
+@endif

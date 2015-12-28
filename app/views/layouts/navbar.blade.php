@@ -41,7 +41,7 @@
                         
                         <li>
                             <a class="text-center" href="{{asset('notifications')}}">
-                                <strong>See All Alerts</strong>
+                                <strong>Zobacz wszystkie powiadomienia</strong>
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li> 
@@ -86,10 +86,13 @@
                             <!-- /input-group -->
                         </li> --}}
                         <li>
-                            <a href="{{asset('/home')}}"><i class="fa fa-home fa-fw"></i> Home</a>
+                            <a href="{{asset('/home')}}"><i class="fa fa-home fa-fw"></i>Strona główna</a>
                         </li>
                         <li>
                             <a href="{{url('/galleryCategories')}}"><i class="fa fa-camera-retro fa-fw"></i> Galeria</a>
+                        </li> 
+                        <li>
+                            <a href="{{url('/members')}}"><i class="fa fa-user fa-fw"></i>Członkowie koła</a>
                         </li> 
                     </ul>
                 </div>

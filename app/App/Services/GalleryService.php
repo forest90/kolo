@@ -59,7 +59,7 @@ use Carbon\Carbon;
 		public function getPhotosForGalleryByCategory($category)
 		{
 		 	$photos = $this->categories->getPhotosForCategory($category);
-			// dd($photos);
+			// dd($category);
 
 			return $this->galleryTransformer->getPhotosForCategory($photos);
 		}

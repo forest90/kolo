@@ -26,8 +26,8 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql_prod',
-	// 'default' => 'mysql',
+	// 'default' => 'mysql_prod',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------

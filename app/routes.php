@@ -20,6 +20,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::post('/addCategory', ['as' => '', 'uses' => 'HomeController@addCategory']);
 	Route::get('/notifications/{id?}', ['as' => 'notifications', 'uses' => 'ManagementController@getAnnouncements']);
 	Route::get('/profile', ['as' => 'profile', 'uses' => 'AuthController@profile']);
+	Route::get('/members', ['as' => 'members', 'uses' => 'HomeController@members']);
 	Route::post('/profile/update', ['as' => 'updateProfile', 'uses' => 'AuthController@postProfile']);
 	Route::group(array('before' => 'auth|administration'), function()
 	{

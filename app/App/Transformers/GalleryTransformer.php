@@ -33,7 +33,7 @@ class GalleryTransformer{
 	public function getPhotosForCategory($photos)
 	{
 		$result = [];
-			$name = $photos->name;
+			$name = $this->getNameOfCategory($photos);
 		foreach ($photos->photosForCategories as $value) {
 			$result[] = [
 				'id' => $value['id'],
@@ -46,5 +46,15 @@ class GalleryTransformer{
 
 		}
 		return [$result, $name];
+	}
+	private function getNameOfCategory($photos)
+	{
+		if(!$photos) return null;
+		foreach ($photos as $photo) {
+			if(isset($photo->name) and !empty($photo->name)){
+				return $photo->name;
+			}
+		}
+		return null;
 	}
 }

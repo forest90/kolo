@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico" />
-    <title>Koło łowieckie Knieja</title>
+    <title>Koło łowieckie nr. 11 Knieja</title>
 
     <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
 
@@ -44,14 +44,14 @@
                         @if (trim($__env->yieldContent('additionals')))
                             {{-- <h1>@yield('title')</h1> --}}
                             <h1 class="page-header col-lg-6">
-                                {{ isset($title) ? $title : 'Koło łowieckie Knieja w Kościanie'}}
+                                {{ isset($title) ? $title : 'Koło łowieckie nr.11 Knieja w Kościanie'}}
                             </h1>
                             <div class="page-header additionals col-lg-6">
                                 @yield('additionals')
                             </div>
                         @else
                             <h1 class="page-header col-lg-12">
-                                {{ isset($title) ? $title : 'Koło łowieckie Knieja w Kościanie'}}
+                                {{ isset($title) ? $title : 'Koło łowieckie nr.11 Knieja w Kościanie'}}
                             </h1>
                         @endif
 

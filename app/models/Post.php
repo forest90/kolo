@@ -1,7 +1,7 @@
 <?php
 
 class Post extends Eloquent {
-	protected $fillable = ['name', 'body', 'file_id'];
+	protected $fillable = ['name', 'body', 'file_id', 'user_id'];
 
 	public function photos()
 	{

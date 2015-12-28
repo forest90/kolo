@@ -40,7 +40,16 @@ class HomeController extends BaseController {
 			$month = Carbon::now()->month;
 		}
 
-		$posts = $this->post->find(1)->orderBy('created_at', 'DESC')->with('photos', 'user', 'user.avatar')->get();
+			$posts = $this->post;
+			if($posts){
+				$posts = $posts
+				->with('photos', 'user', 'user.avatar')
+				->orderBy('created_at', 'DESC')
+				->get();
+			}else{
+				$posts = [];
+			}
+			// dd($posts->toArray());
 		$announcements = $this->managementNotificationsService->getAllAnnouncements();
 
 
@@ -65,8 +74,18 @@ class HomeController extends BaseController {
 			$file = Photo::create(['mime_type' => $mime, 'size' => $size, 'path' => $path.$name]);
 			$file_id = $file->id;
 		}
-		Post::create(Input::only(['name', 'body'])+['file_id' => isset($file_id) ? $file_id : null]);
-		$posts = $this->post->find(1)->orderBy('created_at', 'DESC')->with('photos')->get();
+		Post::create(
+			Input::only(['name', 'body'])+
+			[
+				'user_id' => Auth::getUser()->id,
+				'file_id' => isset($file_id) ? $file_id : null,
+			]
+		);
+		$posts = $this->post;
+		if($posts){
+
+			$posts->orderBy('created_at', 'DESC')->with('photos')->get();
+		}
 
 		return Redirect::action('HomeController@home')->with(compact('posts'));
 	}
@@ -88,7 +107,7 @@ class HomeController extends BaseController {
 	public function uploadGalleryFiles()
 	{
 		$this->gallery->uploadGalleryFiles(Input::file('photos'), Auth::id(), Input::get('id'));
-		return $this->gallery();
+		return $this->gallery(Input::get('id'));
 	}
 
 	public function galleryCategories()
@@ -103,5 +122,9 @@ class HomeController extends BaseController {
 		GalleryCategory::create(Input::only('name', 'description'));
 		return Redirect::action('HomeController@galleryCategories');
 
+	}
+	public function members()
+	{
+		return View::make('layouts.members')->with(['users' => User::with(['avatar'])->get()]);
 	}
 }
