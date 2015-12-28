@@ -8,7 +8,7 @@
 					@if(isset($user->avatar))
 						<img class="avatar-profile" src="{{$user->avatar->path}}"> 
 					@endif
-					{{$user->nick}}	
+					{{$user->nick ? $user->nick : 'Nie podano nazwy.'}}	
 				</li>
 			@endforeach
 		</ol>
