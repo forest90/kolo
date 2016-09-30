@@ -11,9 +11,6 @@
 */
 Route::get('/myapp/install/{key?}',  array('as' => 'install', function($key = null)
 {
-    if($key == "appSetup_key"){
-    try {
-      echo '<br>init migrate:install...';
       Artisan::call('migrate:install');
       echo 'done migrate:install';
       
@@ -28,16 +25,8 @@ Route::get('/myapp/install/{key?}',  array('as' => 'install', function($key = nu
         ]);
       echo '<br>done with app tables migrations';
       echo '<br>init with Sentry tables seader...';
-      Artisan::call('db:seed');
-      echo '<br>done with Sentry tables seader';
-    } catch (Exception $e) {
-      Response::make($e->getMessage(), 500);
-    }
-  }else{
-    App::abort(404);
-  }
 }
-}));
+));
 Route::group(array('before' => 'auth'), function()
 {
 	Route::get('/users/{name}',[ 'as' => 'home', 'uses' => 'HomeController@userPage']);
