@@ -36,7 +36,7 @@ Route::get('/myapp/install/{key?}',  array('as' => 'install', function($key = nu
   }else{
     App::abort(404);
   }
-}
+});
 Route::group(array('before' => 'auth'), function()
 {
 	Route::get('/users/{name}',[ 'as' => 'home', 'uses' => 'HomeController@userPage']);
