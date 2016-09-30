@@ -55,10 +55,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '127.0.0.2',
-			'database'  => 'kolo',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'mysql.hostinger.pl',
+			'database'  => 'u699703542_kolo',
+			'username'  => 'u699703542_root',
+			'password'  => 'password',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -66,9 +66,9 @@ return array(
 		'mysql_prod' => array(
 			'driver'    => 'mysql',
 			'host'      => 'mysql.hostinger.pl',
-			'database'  => 'u222444593_kolo',
-			'username'  => 'u222444593_fores',
-			'password'  => 'parker',
+			'database'  => 'u699703542_kolo',
+			'username'  => 'u699703542_root',
+			'password'  => 'password',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
