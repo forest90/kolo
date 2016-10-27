@@ -25,7 +25,7 @@
 
 					<div class="col-lg-10" style="padding: 0px;">
   					<input name="nick" type="text" 
-  						placeholder="Wpisz swój nick" 
+  						placeholder="Wpisz swoje imię i nazwisko"
   						class="form-control post-width" 
   						aria-describedby="helpBlock">
 					</div>

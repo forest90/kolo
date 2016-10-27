@@ -15,9 +15,6 @@ class AddCategoryIdColumnGalleriesTable extends Migration {
 		Schema::table('galleries', function(Blueprint $table)
 		{
 			$table->integer('category_id')->unsigned()->nullable()->after('id');
-
-			$table->foreign('category_id')->references('id')->on('gallery_categories');
-
 		});
 	}
 

@@ -15,9 +15,6 @@ class AddNickAvatarIdColumnToUsersTable extends Migration {
 		Schema::table('users', function(Blueprint $table)
 		{
 			$table->tinyInteger('avatar_id')->after('password')->nullable();
-
-			$table->foreign('avatar_id')->references('photos')->on('id');
-
 			$table->string('nick')->after('id')->nullable();
 			
 		});

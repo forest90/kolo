@@ -31,7 +31,7 @@ class CreateManagementTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('management');
+		Schema::drop('management_notifications');
 	}
 
 }

@@ -18,8 +18,7 @@ class CreateFilesTable extends Migration {
 			$table->string('mime_type');
 			$table->string('path');
 			$table->string('size');
-			$table->integer('file_id')->unsigned()->nullable()->after('body');
-			$table->foreign('file_id')->references('id')->on('photos');
+			$table->integer('file_id')->unsigned()->nullable();
 			$table->timestamps();
 		});
 	}

@@ -15,7 +15,6 @@ class AddUserIdColumnToPostsTable extends Migration {
 		Schema::table('posts', function(Blueprint $table)
 		{
 			$table->tinyInteger('user_id')->nullable()->after('body');
-			$table->foreign('user_id')->references('users')->on('id');			
 		});
 	}
 
