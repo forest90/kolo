@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	 'default' => 'mysql_prod',
+	 'default' => 'mysql',
 	//'default' => 'mysql',
 
 	/*
@@ -55,10 +55,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'mysql.hostinger.pl',
-			'database'  => 'u699703542_kolo',
-			'username'  => 'u699703542_root',
-			'password'  => 'password',
+			'host'      => 'localhost',
+			'database'  => 'kolo',
+			'username'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

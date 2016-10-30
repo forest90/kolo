@@ -14,16 +14,16 @@
 			</div>
 		</div>
 		<div class="background-image"></div>
-		@if(!$isLogged)
-			<a href="{{url('/login')}}" class="login">
-				<i class="fa fa-power-off fa-4" style="color: #c00;"></i>
-			</a>
-		@endif
-		@if($isLogged)
-			<a href="{{url('/home')}}" class="login">
-				<i class="fa fa-power-off fa-4" style="color: #337ab7;"></i>
-			</a>
-		@endif
+		{{--@if(!$isLogged)--}}
+			{{--<a href="{{url('/login')}}" class="login">--}}
+				{{--<i class="fa fa-power-off fa-4" style="color: #c00;"></i>--}}
+			{{--</a>--}}
+		{{--@endif--}}
+		{{--@if($isLogged)--}}
+			{{--<a href="{{url('/home')}}" class="login">--}}
+				{{--<i class="fa fa-power-off fa-4" style="color: #337ab7;"></i>--}}
+			{{--</a>--}}
+		{{--@endif--}}
 		@if(isset($message))
 			<span class="info">
 				{{$message}}

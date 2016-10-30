@@ -53,7 +53,7 @@ class HomeController extends BaseController {
 		$announcements = $this->managementNotificationsService->getAllAnnouncements();
 
 
-		return View::make('layouts.main')->with(compact('posts', 'month', 'announcements', 'canAdd'));
+		return View::make('layouts.new_main')->with(compact('posts', 'month', 'announcements', 'canAdd'));
 	}
 
 	public function userPage($name = null)
