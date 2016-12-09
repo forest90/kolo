@@ -1,0 +1,143 @@
+.item img{
+	width: 100%;
+}
+.background-image {
+  background-image: url('../img/backgroundCorn.jpg');
+  background-size: cover;
+  display: block;
+  filter: blur(6px) brightness(0.3) contrast(1);
+  -webkit-filter: blur(6px) brightness(0.3) contrast(1);
+  min-height: 800px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.10);
+
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  left: 0;
+  position: relative;
+  right: 0;
+  z-index: 2;
+  height: 1000px;
+  /*display: inline-block;*/
+}
+.about{
+    background: url("../img/transparent-black-background.png") repeat;
+    color: white;
+    min-height: 300px;
+
+}
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top30 { margin-top:30px; }
+.p-right15{ margin-right: 15px;}
+.m-l-0{    padding-left: 0px !important;}
+.carousel-custom{
+	max-height: 300px;
+}
+
+
+.backgorund-main{
+    background-image: url('../img/tlojasne.jpg');
+    background-repeat: no-repeat;
+        background-size: 100%;
+}
+.white{
+    min-height: 1000px;
+    background-color: white;
+}
+.title{
+    background-color: #4FA833;
+    height: 150px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.title span{
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+.top{
+    padding-top: 10px !important;
+    padding-bottom: 5px !important;
+}
+.top-img{
+    position: absolute;
+    right: -30px;
+    width: 9%;
+    top: 20px;
+    transform: rotateY(180deg);
+}
+.navigation {
+    margin-top: 5px;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    background: transparent;
+
+}
+.navigation li {
+    float: left;
+    width: 25%;
+}
+
+.navigation li a {
+    display: block;
+    color: #666;
+    color: #ccc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation li a:hover:not(.active) {
+    background: url("../img/transparent-black-background.png") repeat;
+
+}
+.about-org{
+	padding: 25px;
+	font-size: 15px;
+}
+	.small-title{
+		margin-top: 20px;
+	}
+	.aside-text p{
+		margin-top: 20px;
+	}
+		.callendar table{
+		color: white;
+	}
+		.callendar table strong{
+		color: darkgrey;
+	}
+	table{
+		width: 100%;
+	}
+	table .table-head{
+		text-align: center;
+		font-size: 30px;
+	}
+	.callendar  .pull-right{
+		    margin-top: 15px;
+	}
+	.callendar-wrapper{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+  .login{
+    z-index: 11;
+    position: fixed;
+    left: 41px;
+    font-size: 50px;
+    top: 37px;
+  }

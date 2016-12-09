@@ -1,0 +1,144 @@
+textarea {
+	resize: none ;
+	/*background-image: url('http://www.pomaski.pl/graphic/tapety/sarna.jpg') ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;*/
+}
+.navbar-brand img{
+	    width: 40px;
+    height: 40px;
+} 
+.post-width{
+	/*width: 84.5% !important;*/
+	margin-bottom: 10px;
+}
+
+.slider-image{
+	width: 100%
+}
+.carousel-inner>.item>img{
+	height: 270px !important;
+    width: 100% !important;
+}
+.image-post{
+	width:100px;
+	height:100px;
+}
+.m-t-md{
+	margin-top: 25px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.text-center{
+	text-align: center;
+}
+.photo-button{
+    width: 64px;
+    margin-top: 10px;
+}
+.table-head{
+	text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.text-center
+{
+	text-align: center;
+}
+.calendarTable{
+    width: 100%;
+}
+.calendarTable table tbody tr td:last-child{
+    padding: 0px 40px;
+}
+.info{
+	color: green;
+}
+/*.page-header span{
+    float: right;
+    margin-right: 15px;
+}*/
+.cat-date{
+    position: absolute;
+    bottom: 24px;
+    right: 20px;    
+    color: silver;
+}
+.cat-desc{
+    position: absolute;
+    bottom: 21%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+.cat-thumb{
+    position: absolute;
+    top: 10px;
+    width: 60%;
+    left: 20%;
+    max-height: 60%;
+}
+.cat-thumbnail{
+    position: relative;
+    height: 159px;
+}
+.additionals{
+    padding-bottom: 0px !important;
+}
+.additionals-elem{
+    width: 25.333% !important; 
+    float: right !important; 
+    margin-right: 15px;
+}
+.announcement-title{
+    font-weight: 800;
+    font-size: 16px;
+    text-align: center;
+}
+/* Rounded avatars */
+.post-avatar{
+    width: 50px;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+.avatar {
+    float: left;
+    margin-right: 1em;
+    position: relative;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+.avatar-profile{
+    width:35px;
+}
+.m-b-md{
+    margin-bottom: 15px;
+}
+.timeline > li > .timeline-badge {
+    background-color: #fff !important;
+}

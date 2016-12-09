@@ -1,9 +1,6 @@
 <?php
-namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Post extends Model {
+class Post extends Eloquent {
 	protected $fillable = ['name', 'body', 'file_id', 'user_id'];
 
 	public function photos()

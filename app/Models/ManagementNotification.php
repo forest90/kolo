@@ -1,10 +1,7 @@
 <?php
-namespace App\Models;
 
 
-use Illuminate\Database\Eloquent\Model;
-
-class ManagementNotification extends Model {
+class ManagementNotification extends \Eloquent {
 
 	protected $fillable = ['title', 'content', 'user_id'];
 	protected $guarded = [];

@@ -1,10 +1,7 @@
 <?php
-namespace App\Models;
 
 
-use Illuminate\Database\Eloquent\Model;
-
-class Gallery extends Model {
+class Gallery extends \Eloquent {
 
 	protected $fillable = [];
 	protected $guarded = [];
