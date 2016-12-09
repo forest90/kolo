@@ -3,6 +3,7 @@
 /vendor
 /.idea
 /public/bower_components
+/public/uploads
 Homestead.json
 Homestead.yaml
 .env
